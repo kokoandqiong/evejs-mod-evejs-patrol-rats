@@ -1,0 +1,45 @@
+{
+  "author": {
+    "id": "au-mvtppqproasa",
+    "keyId": "5bb57b91ba6c",
+    "name": "珊瑚中的吃虎鱼"
+  },
+  "category": "玩法",
+  "changelog": "",
+  "conflicts": [],
+  "delisted": false,
+  "description": "让星门和星带重新出现巡逻怪（gate rats / belt rats），并修掉刷怪池与掉落表里几处不合理的地方。原版星门巡逻的开关 gateRatEnabled 默认 false、只活在进程内存里，数据库里的 systemGateControls 又被 normalizeControlState 丢成 {}，所以任何星门旁边都不会有巡逻怪；星带那边只在跃迁落地那一帧摇一次骰子，没中就再也没第二次判定。本模组把星门巡逻默认值按星系安等生成（低安 / 00 开、高安关，显式 /gaterats on|off 优先），补上按势力区分的星门巡逻组，并让停驻在星带范围内的驾驶员每 20 秒补一次判定（每口星带冷却仍由原版控制）。此外：星门巡逻队会按概率带本势力官员；运输舰按 5% 概率出现（掉七种精炼矿）；官员 / BOSS / 旗舰必掉一件本势力装备，旗舰按 15% 掉无畏蓝图、泰坦 / 超级航母按 10% 掉超旗蓝图；00 可以刷出泰坦与超级航母；BOSS / 运输舰池按中文名前缀清理（只留黑暗血袭者 / 暗影天蛇 / 主天使 / 恐惧古斯塔斯 等本势力前缀）；剔除池里打不死的天蛇巡洋舰与重复的天蛇巡逻队；拦住普通 BOSS 掉落里漏出的旗舰级武器。最后，刷出来的怪有 2 小时寿命：玩家离开、走远都不会再让它们消失，只有被打死或寿命到期才会回收。纯编译期内存注入，磁盘零改动；回滚删目录，或把 loader.js 改名为 loader.js.disabled。",
+  "displayName": "星门与星带巡逻怪修复",
+  "downloadUrls": [
+    {
+      "mirror": "github",
+      "priority": 1,
+      "url": "https://github.com/kokoandqiong/evejs-mod-evejs-patrol-rats/releases/download/v1.0.0/evejs-patrol-rats-1.0.0.zip"
+    }
+  ],
+  "evejsVersions": [
+    "261028.x"
+  ],
+  "featured": false,
+  "highlights": [],
+  "history": [],
+  "id": "evejs-patrol-rats",
+  "publishedAt": "2026-11-07",
+  "readme": [
+    "EveJS **261028.1** · 纯编译期内存注入 · 磁盘源码零改动 · 7 处补丁",
+    "---"
+  ],
+  "repo": "https://github.com/kokoandqiong/evejs-mod-evejs-patrol-rats",
+  "requiresRestart": true,
+  "sha256": "0a21104cc02f14fa90a0d3e4502e9f9a055f164bc8da5a14f8d3cce9e1930a69",
+  "sizeBytes": 40899,
+  "tags": [
+    "NPC",
+    "巡逻怪",
+    "星门",
+    "星带",
+    "belt rats",
+    "gate rats"
+  ],
+  "version": "1.0.0"
+}
